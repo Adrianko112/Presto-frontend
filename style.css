@@ -1,0 +1,148 @@
+/* REGOLE FONTS */
+h1,h2,h3,h4,h5,h6,.h1, .h2, .h3, .h4, .h5, .h6{
+  font-family: "Oswald", sans-serif;
+}
+
+
+*{
+font-family: "Roboto", sans-serif;
+}
+
+/* REGOLE COLORI */
+:root{
+  --black: #12140F;
+  --yellow1: #A49828;
+  --yellow2: #C7C51B;
+  --green: #31553B;
+  --white: #e9e4e4;
+}
+
+body{
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.bg-yellow1{
+  background-color: var(--yellow1);
+}
+
+.bg-yellow2{
+  background-color: var(--yellow2);
+}
+.bg-green{
+  background-color: var(--green);
+}
+.bg-white{
+  background-color: var(--white);
+}
+.bg-dark{
+  background-color: var(--black);
+}
+.text-yellow1{
+  color: var(--yellow1);
+}
+.text-yellow2{
+  color: var(--yellow2);
+}
+.text-green{
+  color: var(--green);
+}
+.text-white{
+  color: var(--white);
+}
+
+/* NAVBAR */
+.navbar {
+  height: 140px;
+  transition:0.5s;
+}
+.nav-link {
+  color: var(--yellow1) !important;
+  font-weight: 700;
+}
+.nav-link:hover {
+  color: var(--yellow2) !important;
+  font-weight: 700;
+}
+.logo {
+  width: 40px;
+  height: auto;
+}
+.logo2 {
+  width: 50px;
+  height: auto;
+  transition: 0.5s;
+}
+/*HEADER*/
+.header {
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.squarespace-cdn.com/content/v1/570c1514c2ea513f7d99d605/1517306805041-PCI9ESIWOKALQSIYZPFJ/breakingbad_hero.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  text-align: center;
+}
+
+h1 {
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.btn-custom {
+  background-color: var(--yellow1);
+  color: var(--white);
+  border: 2px solid var(--yellow1);
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 50px;
+  transition: background-color 0.3s ease;
+  transition: 0.5s;
+}
+
+.btn-custom:hover {
+  background-color: var(--yellow2);
+  border-color: var(--yellow2);
+  color: var(--white);
+  scale: 1.1;
+}
+
+/* POSITIONED */
+.positioned {
+  position: relative;
+  margin-top: -150px;
+ 
+}
+
+.col-custom {
+  
+  padding: 30px;
+  border: 2px solid var(--yellow1);
+  cursor: pointer;
+  transition: 0.5s;
+  color: var(--yellow2);
+  
+}
+
+.col-custom:hover {
+  background-color: var(--yellow1);
+  color: var(--white);
+  border-color: var(--yellow1);
+  scale: 1.05;
+}
+
+@media screen and (max-width: 600px) {
+  .positioned {
+    position: static;
+  }
+}
+
+/* NUMERI INCREMENTALI */
+.number {
+  font-size: 50px;
+  font-weight: bold;
+  color: var(--yellow1);
+}
