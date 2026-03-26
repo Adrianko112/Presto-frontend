@@ -165,3 +165,58 @@ h1 {
   justify-content: center;
   align-items: center;
 }
+
+/*PAGINA ANNUNCI*/
+.accordion-item {
+  background-color: var(--green);
+  color: var(--yellow1);
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-button {
+  background-color: var(--green);
+  color: var(--yellow1);
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-button:not(.collapsed) {  
+  background-color: var(--yellow1);
+  color: var(--green);
+  box-shadow: none;
+} 
+
+.accordion-button:hover {
+  background-color: var(--yellow1);
+  color: var(--green);
+ 
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+.card-custom {
+  height: 200px;
+  width: 25%;
+  border: 2px solid var(--yellow1);
+  border-radius: 20px;
+  padding: 20px;
+  color: var(--yellow1);
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;  
+  align-items: center; 
+  justify-content: space-evenly;
+}

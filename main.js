@@ -144,7 +144,7 @@ stars.forEach((star, index) => {
     
      
  
-  loop: true,
+  
 
   // Navigation arrows
   navigation: {
