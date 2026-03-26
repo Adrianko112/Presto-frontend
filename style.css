@@ -208,7 +208,7 @@ h1 {
 }
 
 .card-custom {
-  height: 200px;
+  background-color: var(--green);
   width: 25%;
   border: 2px solid var(--yellow1);
   border-radius: 20px;
@@ -219,4 +219,10 @@ h1 {
   flex-direction: column;  
   align-items: center; 
   justify-content: space-evenly;
+}
+
+.img-card {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
