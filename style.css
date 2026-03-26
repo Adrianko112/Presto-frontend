@@ -146,3 +146,22 @@ h1 {
   font-weight: bold;
   color: var(--yellow1);
 }
+
+/*Swiper*/
+
+.swiper {
+  height: 600px;
+}
+
+.card-review {
+  height: 250px;
+  width: 500px;
+  border: 2px solid var(--yellow1) ;
+  border-radius: 20px;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

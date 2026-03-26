@@ -75,3 +75,80 @@ let observer = new IntersectionObserver((entries) => {
 });
 
 observer.observe(firstNumber);
+
+
+
+let reviews = [
+    {
+        user : 'Adriano',
+        description : 'Il più bel sito del mondo .',
+        rank: 5
+    },
+     {
+        user : 'gioele',
+        description : 'Totalmente inutile, non serve a niente.',
+        rank: 1
+    },
+     {
+        user : 'Sonia',
+        description : 'Ottimo sito, lo consiglio a tutti.',
+        rank: 4
+    },
+     {
+        user : 'Joyce',
+        description : 'Provette perfette, non ho avuto nessun problema.',
+        rank: 5
+    },
+];
+
+let swiperWrapper = document.querySelector(".swiper-wrapper");
+
+reviews.forEach((recensione) => {
+    let div = document.createElement("div");
+    div.classList.add("swiper-slide");
+    div.innerHTML = `
+         <div class="card-review bg-green ">
+        <p class="lead text-center ">${recensione.description}</p>
+        <p class="h4 text-center "> ${recensione.user} </p>
+        <div class="d-flex justify-content-center gap-2 star">
+        
+        </div>
+      </div>
+    `;
+    swiperWrapper.appendChild(div);
+});
+
+let stars = document.querySelectorAll(".star");
+
+stars.forEach((star, index) => {
+    for (let i = 0; i < reviews[index].rank; i++) {
+        let starIcon = document.createElement("i");
+        starIcon.classList.add("fa-solid", "fa-star");
+        star.appendChild(starIcon);
+    }
+
+    let difference = 5 - reviews[index].rank;
+    for (let i = 0; i < difference; i++) {
+        let starIcon = document.createElement("i");
+        starIcon.classList.add("fa-regular", "fa-star");
+        star.appendChild(starIcon);
+    }
+});
+
+
+//js swiper
+    const swiper = new Swiper('.swiper', {
+  // Optional parameters
+    effect: "cards",
+      grabCursor: true,
+    
+     
+ 
+  loop: true,
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
