@@ -10,7 +10,7 @@ fetch('./annunciBR.json').then((response) => response.json()).then((data) => {
         let categories = data.map((annuncio) => annuncio.category);
         let uniqueCategories = Array.from(new Set(categories));
         
-        // Aggiungiamo manualmente l'opzione "Tutte" per far funzionare il filtro 'all'
+        
         let allDiv = document.createElement('div');
         allDiv.classList.add('form-check');
         allDiv.innerHTML = `<input class="form-check-input" type="radio" name="categories" id="all" checked>
@@ -90,7 +90,7 @@ fetch('./annunciBR.json').then((response) => response.json()).then((data) => {
 
     // EVENT LISTENERS 
 
-    // Selezioniamo i radio dopo averli creati
+    
     let radioButtons = document.querySelectorAll('.form-check-input');
     radioButtons.forEach((button) => {
         button.addEventListener('click', () => {
