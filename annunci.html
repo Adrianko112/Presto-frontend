@@ -58,7 +58,7 @@
             <div class="col-12 col-md-3">
 
                 <h3>Seleziona:</h3>
-                <div class="accordion" id="accordionExample">
+                <div class="accordion sticky-top" id="accordionExample">
                     <div class="accordion-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse"
@@ -88,6 +88,8 @@
                         </h2>
                         <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
+                                <input id="priceRange" type="range" class="w-100">
+                                <p class="lead" id="priceValue">Prezzo: 0 €</p>
 
                             </div>
                         </div>
@@ -101,6 +103,7 @@
                         </h2>
                         <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
+                                <input id="keywordInput" type="text" class="form-control" placeholder="Inserisci parola chiave">
 
                             </div>
                         </div>

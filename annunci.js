@@ -1,5 +1,7 @@
 fetch('./annunci.json').then((response) => response.json()).then((data) => {
 
+    data.sort((a, b) => a.price - b.price);
+
     let radioWrapper = document.getElementById('radio-wrapper');
     let cardWrapper = document.getElementById('card-wrapper');
 
@@ -63,5 +65,49 @@ radioButtons.forEach((Button) => {
       filterCards(Button.id);
     }); 
 }); 
+
+
+let priceInput = document.querySelector('#priceRange');
+let priceValue = document.querySelector('#priceValue');
+
+function setPriceInput() {
+    let prices = data.map((annuncio) => +annuncio.price);
+    prices.sort((a, b) => a - b);
+    let maxPrice = Math.ceil(prices.pop());
+    priceInput.max=maxPrice;
+    priceInput.value=maxPrice;
+    priceValue.innerHTML = `Prezzo: ${maxPrice} €`;
+
+
+
+};
+
+setPriceInput();
+
+function filterByPrice(price) {
+    let filteredData = data.filter((annuncio) => +annuncio.price <= price);
+    cardCreate(filteredData);
+}
+
+priceInput.addEventListener('input', () => {
+    priceValue.innerHTML = `Prezzo: ${priceInput.value} €`;
+    filterByPrice(priceInput.value);
 });
 
+let keywordInput = document.querySelector('#keywordInput');
+
+function filterByKeyword(keyword) {
+    let filteredData = data.filter((annuncio) => annuncio.name.toLowerCase().includes(keyword.toLowerCase()));
+    cardCreate(filteredData);
+}
+
+keywordInput.addEventListener('input', () => {
+    filterByKeyword(keywordInput.value);
+});
+
+
+
+
+
+
+});
