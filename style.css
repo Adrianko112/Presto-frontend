@@ -226,3 +226,105 @@ h1 {
   height: auto;
   border-radius: 10px;
 }
+
+/* PAGINA CHI SIAMO */
+
+.circle {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 2px solid var(--yellow1);
+  background-color: var(--green);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  font-size: 24px;
+  font-weight: bold;
+  position: relative;
+}
+
+.vh-75 {
+  height: 75vh;
+}
+
+.opener {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: var(--yellow1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  z-index: 3;
+  transition: 0.5s;
+}
+
+.moved {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid var(--yellow1);
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  color: var(--white);
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 2;
+  transition: 0.5s;
+}
+
+.flipCard {
+  width: 250px;
+  height: 400px;
+ 
+  
+}
+
+.flipCard:hover > .inner {
+  transform: rotateY(180deg);
+}
+
+.inner {
+  height: 400px;
+  width: 100%;
+   border: 2px solid var(--yellow1);
+  border-radius: 20px;
+    background-image: none;
+  position: relative;
+  transition: 0.5s;
+  transform-style: preserve-3d;
+}
+
+.innerFace {
+   width: 250px;
+  height: 400px;
+  background-image: none;
+  background-size: cover;
+   border: 2px solid var(--yellow1);
+   border-radius: 20px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: 0.5s;
+}
+
+.innerBack {
+   width: 250px;
+  height: 400px;
+  position: absolute;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+text-align: center;
+  padding: 15px;
+ 
+}
